@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+    include ../includes/head.pug
+    body
+        header.header
+            a(href="#").logo ТехноСиб
+            div.toggle
+        section.main
+            video(src="./uploads/Belzonalo.mp4" muted autoplay loop type="mp4")
+            .main__textBox
+                h2 Компания АО «ТехноСиб»
+                p является официальным дистрибьютором компании «Belzona Polymerics LTD» в Дальневосточном регионе Российской федерации более  15 лет. Мы готовы поставить Вам материал.
+                a(href="#") Узнать подробнее
+            .main__videoBx
+                video(src="./uploads/Belzonalo.mp4" muted autoplay loop type="mp4")
+        include ../includes/footer.pug
