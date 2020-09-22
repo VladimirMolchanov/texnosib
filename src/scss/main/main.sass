@@ -2,11 +2,20 @@
     position: relative
     width: 100%
     min-height: 100vh
-    padding: 0 100px;
+    padding: 0 30px
     display: flex
     justify-content: flex-start
     align-items: center
     background: #111
+    &::after
+        content: ''
+        width: 100%
+        height: 150px
+        background-color: #f9f9f9
+        position: absolute
+        bottom: 0px
+        left: 0px
+        clip-path: polygon(100% 0%,0 100%,100% 100%)
     &::before
         content: ''
         position: absolute
@@ -55,3 +64,37 @@
         z-index: 1
         video
             opacity: 1
+    @media (max-width: 991px)
+        flex-direction: column
+        padding-top: 200px
+        align-items: flex-end
+        &::after
+            content: none
+        &__textBox
+            margin-bottom: 80px
+            h2
+                font-size: 1.5em
+            p
+                font-size: 1em
+            a
+                font-size: 1em
+                padding: 10px 20px
+        &__videoBx
+            margin-left: 0
+            height: 250px
+    @media (min-width: 1200px)
+        &::after
+            height: 100px
+        &__videoBx
+            height: 250px
+    @media (min-width: 1400px)
+        padding: 0 100px
+        &::after
+            height: 150px
+        &__videoBx
+            height: 450px
+    @media (min-width: 2000px)
+        &__textBox
+            max-width: 1000px
+        &__videoBx
+            height: 700px

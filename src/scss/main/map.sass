@@ -1,0 +1,63 @@
+.map
+    position: relative
+    &__content
+        position: absolute
+        top: 60px
+        left: 0px
+        width: 100%
+        h3
+            font-size: 24px
+            text-align: center
+    svg
+        width: 100%
+        margin-top: 2%
+        
+    a
+        color: #29ACEC
+
+    path
+        transition: all .5s
+        fill: rgba(0,0,0,0.2)
+        stroke: rgba(0,0,0,0.5)
+        &.active
+            fill: #e1781a!important
+
+    .indicator
+        position: absolute
+        display: inline
+        background: rgba(0,0,0,1)
+        color: #f1f1f1
+        padding: 10px 30px
+        font: 20px Arial
+        border-radius: 5px
+        min-width: 300px
+        text-transform: capitalize
+        display: none
+    .flag
+        width: 80px
+    .clear
+        clear: both
+
+    .name
+        float: left
+        margin-right: 30px   
+
+    .regs
+        columns: 5
+        padding: 10px
+        display: none
+    .reg span
+        font-size: 10px
+
+    .regs div
+        width: auto
+        font-size: 14px
+        cursor: pointer
+    .capital
+        clear: both
+    @media (max-width: 991px)
+        svg
+            height: 350px
+        &__content
+            h3
+                font-size: 18px

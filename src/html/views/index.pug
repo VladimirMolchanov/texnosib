@@ -3,14 +3,200 @@ html(lang="ru")
     include ../includes/head.pug
     body
         header.header
-            a(href="#").logo ТехноСиб
-            div.toggle
+            .header__left
+                a(href="#").logo 
+                    img(src="uploads/logo-header.png", alt="")
+                menu.menu
+                    li
+                        a(href="#").menu__item О нас
+                    li
+                        a(href="#").menu__item Услуги
+                    li 
+                        a(href="#").menu__item Продукция
+                    li 
+                        a(href="#").menu__item Обратная связь
+            .toggle(onclick="window.toogleMenu()")
+                i.fa.fa-bars
+                i.fa.fa-close
+            .header__right
+                .header__phone
+                    a(href="#")
+                        i.fa.fa-whatsapp
+                    a(href="#")
+                        i.fa.fa-telegram
+                    a(href="#") 
+                        i.fa.fa-mobile
+                        | +7 (999) 999-99-99
         section.main
             video(src="./uploads/Belzonalo.mp4" muted autoplay loop type="mp4")
             .main__textBox
                 h2 Компания АО «ТехноСиб»
-                p является официальным дистрибьютором компании «Belzona Polymerics LTD» в Дальневосточном регионе Российской федерации более  15 лет. Мы готовы поставить Вам материал.
+                p сервис, поставки, консультации и технические решения на базе полимерных композиционных материалов Belzona Polymerics LTD.
                 a(href="#") Узнать подробнее
             .main__videoBx
                 video(src="./uploads/Belzonalo.mp4" muted autoplay loop type="mp4")
+        section.about
+
+            .about__content
+                .about__content--left
+                    h2.text-left Наша компания это:
+                    .about__list
+                        .about__list--item
+                            .about__icon
+                                img(src="/uploads/chesnost.png", alt="")
+                            div
+                                .about__name Честность
+                                .about__desc Гарантируем прозрачность на любом этапе переговоров и выполнения работ.
+                        .about__list--item
+                            .about__icon
+                                img(src="/uploads/otkr.png", alt="")
+                            div
+                                .about__name Открытость
+                                .about__desc Всегда готовы к диалогу и обсуждению ваших задач. Оперативно отвечаем на все запросы.
+                        .about__list--item
+                            .about__icon
+                                img(src="/uploads/otvetstv.png", alt="")
+                            div
+                                .about__name Ответственность
+                                .about__desc Строго выполняем взятые на себя обязательства, соблюдаем сроки, ценим своё и ваше время.
+                        .about__list--item
+                            .about__icon
+                                img(src="/uploads/ecsp.png", alt="")
+                            div
+                                .about__name Высокая экспертность
+                                .about__desc Знаем всё о композиционных материалах, полимерных технологиях и их рациональном применении.
+                        .about__list--item
+                            .about__icon
+                                img(src="/uploads/prof.png", alt="")
+                            div
+                                .about__name Профессионализм
+                                .about__desc Наши сотрудники имеют огромный опыт в решении самых разных технических задач.
+                
+                    p Мы 2000 года АО «ТехноСиб» является официальным дистрибьютором компании «Belzona Polymeric Ltd.», Великобритания.
+
+                    
+                .about__content--right
+                    include ../includes/map.pug
+        section.servies
+            h2.h2 Наши услуги
+            .servies__content
+                .servies__container
+                    .servies__item
+                        .servies__circle
+                        .servies__icon
+                            img(src="uploads/uslugi1.png", alt="")
+                        .servies__text
+                            .servies__name Ремонт
+                            span Ремонт деталей и узлов промышленного оборудования и поверхностей подверженных эрозии, коррозии, абразивному износу и влиянию агрессивных химических сред.
+                    .servies__item
+                        .servies__circle
+                        .servies__icon
+                            img(src="uploads/uslugi2.png", alt="")
+                        .servies__text
+                            .servies__name консультация
+                            span Технические и технологические консультации по материалам и их применению в промышленности, на основе мирового опыта.
+                    .servies__item
+                        .servies__circle
+                        .servies__icon
+                            img(src="uploads/uslugi3.png", alt="")
+                        .servies__text
+                            .servies__name Поставка
+                            span Поставки полимерных композиционных материалов всей производственной линейки Belzona.
+                    .servies__item
+                        .servies__circle
+                        .servies__icon
+                            img(src="uploads/uslugi4.png", alt="")
+                        .servies__text
+                            .servies__name Обучение
+                            span Обучение технических специалистов эффективному применению материалов, поддержка в разработке ремонтных решений, для условий конкретного предприятия.
+        .section.tovar
+            h2.h2 Наша продукция
+            .tovar__content
+                .tovar__container
+                    .tovar__line
+                        span
+                        span
+                        span
+                        span
+                        span
+                        span
+                        span
+                        span
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p.tovar__text--desc Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                    .tovar__item
+                        .tovar__name BELZONA® 1111 (СУПЕР МЕТАЛЛ)
+                        .tovar__info
+                            .tovar__img
+                                img(src="uploads/thumb_1111_1.jpg", alt="")
+                            .tovar__text
+                                p Эпоксидный полимерный композит для ремонта металла.
+                                p Belzona 1111 (Super Metal) легко смешивать и наносить без специальных инструментов. После отверждения этот материал может подвергаться любой механической обработке с помощью традиционного резца.
+                                a(href="#").btn.btn-warning Подробнее
+                .tovar__btn
+                    a(href="#").btn.btn-warning Полный прай-лист
+        section.feedback
+            .feedback__content
+                .feedback__container
+                    .feedback__text
+                        h2.h2 Свяжитесь с нами
+                        span Если у Вас есть вопрос, заполните, пожайлуйста, форму обратной связи. 
+                    .form
+                        .form-group
+                            label(for="") Имя
+                            input(type="text").form-control
+                        .form-group
+                            label(for="") E-mail
+                            input(type="text").form-control
+                        .form-group
+                            label(for="") Телефон
+                            input(type="text").form-control
+                        .form-group
+                            label(for="") Сообщение
+                            textarea(name="", cols="30", rows="5").form-control
+                        .form-group.text-right
+                            btn.btn.btn-warning Отправить
         include ../includes/footer.pug
